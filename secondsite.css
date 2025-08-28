@@ -1,6 +1,6 @@
 body {
-    background: rgb(0,130,255);
-    color: rgb(0,20,150);
+    background: rgb(4, 72, 136);
+    color: rgb(2, 35, 255);
     padding: 10px;
     font-family: Zekton;
 }
@@ -44,7 +44,7 @@ a {
 }
 
 main {
-    background: rgb(0,102,255);
+    background: rgb(0, 0, 0);
     display: flex;
     margin-top: 20px;
 }
@@ -74,7 +74,7 @@ h2, h3 {
 }
 
 .images {
-    background: rgb(0,102,255);
+    background: rgb(0, 0, 0);
     flex: 1;
     padding: 10px;
     margin: 25px;
