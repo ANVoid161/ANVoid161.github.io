@@ -1,5 +1,5 @@
 body {
-    background: rgb(94, 48, 0);
+    background: rgb(82, 42, 0);
     color: rgb(0, 0, 0);
     padding: 10px;
     font-family: Zekton;
@@ -44,7 +44,7 @@ a {
 }
 
 main {
-    background: rgb(138, 55, 0);
+    background: rgb(97, 39, 0);
     display: flex;
     margin-top: 20px;
 }
