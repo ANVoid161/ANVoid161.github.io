@@ -5,9 +5,11 @@ if (response === "I open at the close.") {
 }
 
 else if (response === "No.") {
-  alert("Crucio.")
+  alert("Crucio.");
+  location.href="index.html";
 }
 
 else {
   alert("Try Again.")
+  location.href="secondsite.html"
 }
