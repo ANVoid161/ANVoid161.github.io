@@ -1,4 +1,4 @@
-var response = prompt("Password?")
+var response = prompt("Give me something of importance, then you shall pass.")
 
 if (response === "I open at the close.") {
   alert("You shall proceed.")
@@ -19,7 +19,7 @@ else if (response === "I am Mr Gaspard.") {
 }
 
 else if (response === "I am Hallebot God.") {
-  alert("AVADA KEDAVRA!");
+  alert("You should not be here. BEGONE!");
   location.href="index.html";
 }
 else if (response === "Again.") {
@@ -33,6 +33,19 @@ location.href="secondsite.html"
 else if (response === "Stop.") {
   alert("I am getting sick of you.")
 location.href="secondsite.html"
+}
+else if (response === "I am Aiden.") {
+  alert("Ah, long time no see!")
+}
+else if (response === "Duster.") {
+  alert("My favorite band. Love listening to their music. Come in.")
+}
+else if (response === "Katy Perry") {
+  alert("No, I'm not listening to their music.")
+  location.href="secondsite.html"
+}
+else if (response === "Draco dormiens nunquam titillandus.") {
+  alert("Hm, a wise quote. You may enter.")
 }
 else {
   alert("Try Again.")
