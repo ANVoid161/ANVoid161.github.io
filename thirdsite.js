@@ -5,7 +5,7 @@ if (response === "I open at the close.") {
 }
 
 else if (response === "No.") {
-  alert("Crucio.");
+  alert("Then get out of my sight.");
   location.href="index.html";
 }
 
@@ -24,11 +24,11 @@ else if (response === "I am Hallebot God.") {
 }
 else if (response === "Again.") {
   alert("Restart the process.")
-  location.href="secondsite.html"
+  location.href="thirdsite.html"
 }
 else if (response === "The process."){
   alert("Please stop.")
-location.href="secondsite.html"
+location.href="thirdsite.html"
 }
 else if (response === "Stop.") {
   alert("I am getting sick of you.")
@@ -47,7 +47,11 @@ else if (response === "Katy Perry") {
 else if (response === "Draco dormiens nunquam titillandus.") {
   alert("Hm, a wise quote. You may enter.")
 }
+else if (response === null) {
+  alert("Very well, come back when you want to.")
+  location.href="secondsite.html"
+}
 else {
   alert("Try Again.")
-  location.href="secondsite.html"
+  location.href="thirdsite.html"
 }
