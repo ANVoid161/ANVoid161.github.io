@@ -39,10 +39,12 @@ h1 {
 }
 
 .index {
+    text-decoration: none;
     color: orange;
 }
 
 .secondsite {
+    text-decoration: none;
     color: blue;
 }
 

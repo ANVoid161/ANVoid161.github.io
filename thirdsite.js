@@ -16,7 +16,7 @@ else if (response === "ANVoid161 is not a gamer") {
 }
 
 else if (response === "I am Mr Gaspard") {
-  alert("Fine, only because you're my teacher.");
+  alert("I see. You shall enter then.");
   location.href="thirdsite.html"
 }
 
@@ -42,6 +42,10 @@ else if (response === "Draco dormiens nunquam titillandus") {
 else if (response === ""){
   alert("At least say something...")
   location.href="secondsite.html"
+}
+else if (response === "I am Phoebe") {
+  alert("Fine, I guess you can enter.")
+  location.href="thirdsite.html"
 }
 else {
   alert("Try Again.")
