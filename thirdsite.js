@@ -35,10 +35,6 @@ else if (response === "Katy Perry") {
 else if (response === "Draco dormiens nunquam titillandus") {
   alert("Hm, a wise quote. You may enter.")
 }
-else if (response === null) {
-  alert("Very well, come back when you want to.")
-  location.href="secondsite.html"
-}
 else if (response === ""){
   alert("At least say something...")
   location.href="thirdsite.html"
