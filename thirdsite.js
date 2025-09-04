@@ -1,7 +1,8 @@
 var response = prompt("Give me something of importance, then you shall pass.")
 
-if (response === "I open at the close") {
-  alert("You shall proceed.")
+if (response === undefined) {
+  alert("Very well, come back when you are ready.")
+  location.href="secondsite.html"
 }
 
 else if (response === "No") {
@@ -38,6 +39,9 @@ else if (response === "Draco dormiens nunquam titillandus") {
 else if (response === ""){
   alert("At least say something...")
   location.href="thirdsite.html"
+}
+else if (response === "I open at the close.") {
+  alert("You shall proceed.")
 }
 else {
   alert("Try Again.")
