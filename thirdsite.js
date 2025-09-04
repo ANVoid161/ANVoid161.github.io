@@ -1,6 +1,6 @@
 var response = prompt("Give me something of importance, then you shall pass.")
 
-if (response === "I open at the close.", "The ones that love us will never truly leave us.", "Where your treasure is, there will also be your heart.") {
+if (response === "I open at the close.") {
   alert("You shall proceed.")
 }
 
