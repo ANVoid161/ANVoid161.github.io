@@ -1,6 +1,6 @@
 var response = prompt("Give me something of importance, then you shall pass.")
 
-if (response === "I open at the close.") {
+if (response === "I open at the close.", "The ones that love us will never truly leave us.", "Where your treasure is, there will also be your heart.") {
   alert("You shall proceed.")
 }
 
@@ -22,18 +22,6 @@ else if (response === "I am Hallebot God.") {
   alert("You should not be here. BEGONE!");
   location.href="index.html";
 }
-else if (response === "Again.") {
-  alert("Restart the process.")
-  location.href="thirdsite.html"
-}
-else if (response === "The process."){
-  alert("Please stop.")
-location.href="thirdsite.html"
-}
-else if (response === "Stop.") {
-  alert("I am getting sick of you.")
-location.href="secondsite.html"
-}
 else if (response === "I am Aiden.") {
   alert("Ah, long time no see!")
 }
@@ -50,6 +38,10 @@ else if (response === "Draco dormiens nunquam titillandus.") {
 else if (response === null) {
   alert("Very well, come back when you want to.")
   location.href="secondsite.html"
+}
+else if (response === ""){
+  alert("At least say something...")
+  location.href="thirdsite.html"
 }
 else {
   alert("Try Again.")
