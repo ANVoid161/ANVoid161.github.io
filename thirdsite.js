@@ -22,7 +22,6 @@ else if (response === "I am Mr Gaspard") {
 
 else if (response === "I am Hallebot God") {
   alert("You should not be here. BEGONE!");
-  location.href="hahayes.html";
 }
 else if (response === "I am Aiden") {
   alert("Ah, long time no see!")
