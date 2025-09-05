@@ -2,7 +2,7 @@ body {
     background: rgb(124, 64, 0);
     color: rgb(255, 145, 0);
     padding: 10px;
-    font-family: Zekton;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #all-contents {
