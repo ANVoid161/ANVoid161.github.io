@@ -85,8 +85,18 @@ h2, h3 {
 .images {
     background: rgb(0, 0, 0);
     flex: 1;
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
     width: 780px;
     justify-self: center;
+    text-align: center;
+}
+.power2 {
+    background: black;
+    flex: 1;
+    padding: 5px;
+    margin: 10px;
+    width: 780px;
+    justify-self: center;
+    text-align: center;
 }

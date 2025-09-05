@@ -70,6 +70,14 @@ else if (response === "Upgraded Space Orbit") {
   alert("I guess there will be a capsule losing contact at some point.")
   location.href="thirdsite.html"
 }
+else if (response === "Tetris") {
+  alert("Hm, my favorite game. You may enter.")
+  location.href="thirdsite.html"
+}
+else if (response === "Something of importance") {
+  alert("ha ha. very funny.")
+  location.href="hahayes.html"
+}
 else {
   alert("Try Again.")
   location.href="secondsite.html"
