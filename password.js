@@ -1,6 +1,6 @@
 var response = prompt("Give me something of importance, then you shall pass.")
 
-if (response === "I open at the close" || response === "Draco Dormiens Nunquam Titillandus") {
+if (response === "I open at the close" || response === "Draco Dormiens Nunquam Titillandus" || response === "Sherbet Lemon") {
   alert("You shall proceed.")
   location.href="thirdsite.html"
 }
@@ -76,6 +76,17 @@ else if (response === "Tetris") {
 }
 else if (response === "Something of importance") {
   alert("ha ha. very funny.")
+  location.href="hahayes.html"
+}
+else if (response === "Skibidi Toilet") {
+  alert("I don't want you here anymore...")
+}
+else if (response === "Contemporary Movement") {
+  alert("Me and the Birds.")
+  location.href="thirdsite.html"
+}
+else if (response === "sfc /scannow") {
+  alert("This is not command prompt.")
   location.href="hahayes.html"
 }
 else {
