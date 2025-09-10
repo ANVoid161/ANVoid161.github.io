@@ -27,7 +27,6 @@ $(function () {
     //////////////////////////////////
 
     
-     toggleGrid();
 
 
     createPlatform(200, 630, 100, 20)
@@ -44,7 +43,8 @@ $(function () {
 
 
     // TODO 3 - Create Collectables
-    createCollectable("steve", 200, 100, 0, 0)
+    createCollectable("cat", 200, 100, 0, 0)
+    createCollectable("cat", 500, 400, 0, 0)
 
 
     
@@ -61,3 +61,15 @@ $(function () {
 
   registerSetup(setup);
 });
+
+var audio = new Audio(src="Audio.mp3")
+audio.loop = true;
+audio.volume = 0.8;
+
+function toggleAudio() {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
