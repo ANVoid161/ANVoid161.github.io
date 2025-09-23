@@ -46,19 +46,51 @@
             <p>I am sorry to say Hallebot god... you must negotiate peace before your fate is decided.</p>
             <button id='noSurrender'>I won't surrender.</button>
             <button id='surrender'>I surrender.</button>
-            <script src="/thirdsite/thirdsite.js"></script>
-            <!--the script is on this div class under the button to activate the prompts-->
+            <script>
+                function noSurrender() {
+  alert('Then you must prepare for the immense power that Celeste holds...')
+}
+
+function surrender() {
+  alert('Then Celeste shall bring you peace.')
+}
+
+document.getElementById('noSurrender').onclick = noSurrender;
+document.getElementById('surrender').onclick = surrender;
+            </script>
         </div>
         <div class="power2">
             <p>As for Mr. Gaspard... I assume you have the key of the keepers don't you?</p>
             <button id='yes'>yes</button>
             <button id='no'>no</button>
-            <script src="/thirdsite/button2.js"></script>
-            <!-- example from line 50 shown above -->
+            <script>
+                function yes() {
+                alert('Good... its best if we keep it in the right hands...')
+                }
+
+                function no() {
+                alert('Hm, that may be concerning. Its best if we find it now or else the Hallebot god will get to it first.')
+                }
+
+document.getElementById('yes').onclick = yes;
+document.getElementById('no').onclick = no;
+            </script>
         </div>
         <footer class="uselessButton">
             <button onclick="toggleAudio()">Useless button</button>
-            <script src="/thirdsite/Music.js"></script>
+            <script>
+                var audio = new Audio(src="Clockwork.mp3")
+                audio.loop = true;
+                audio.volume = 0.1;
+
+                function toggleAudio() {
+                if (audio.paused) {
+                audio.play()
+                } else {
+                audio.pause();
+                }
+               }
+            </script>
         </footer>
     </body>
 </html>

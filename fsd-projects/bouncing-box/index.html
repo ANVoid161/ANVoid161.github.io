@@ -6,9 +6,9 @@
     <script src="jquery.min.js"></script>
     <style>
       .box {
-        width: 70px;
-        height: 70px;
-        background-color: teal;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -20,7 +20,9 @@
       }
 
       body {
-        background-color: blue;
+        background-image: url("rain.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
       }
 
       .board {
@@ -114,7 +116,7 @@ moveBoxTo(positionX, positionY)
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-      positionX = 0;
+      positionX = 1;
       changeBoxText(points);
       points = points + 1
       speed = 3 * points + 10

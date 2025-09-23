@@ -97,3 +97,9 @@ h2, h3 {
     text-decoration: none;
     color: rgb(255,130,0)
 }
+
+.shush {
+    position: fixed;
+    top: 880px;
+    left: 10px;
+}
