@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For tweaking purposes</title>
+        <style>
+            body {
+                background-color: darkblue;
+                color:orange;
+                padding: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+            nav {
+                background: black;
+                margin: 0 auto;
+                display: flex;
+                padding: 10px;
+                margin-bottom: 20px;
+                }
+            #nav-ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            .nav-li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            a{
+                text-decoration: none;
+                color:aqua;
+            }
+            main{
+                background-color:darkcyan;
+                display: flex;
+                margin-top: 20px;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar-img {
+                width: 350px;
+            }
+            footer {
+                background-color:darkcyan;
+                display: flex;
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+    <div id="all-contents">
+     <nav>
+      <ul id="nav-ul">
+        <li class="nav-li">
+            <a href="/index.html">Back to the lobby</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="sidebar">
+      <img class="sidebar-img" src="/4thsite/confusion.png">
+      </div>
+      <div class="content">
+       <h2>This is gonna be used for tweaking stuff in Java</h2>
+       <button id="theButton" onclick="createText()">This button creates text</button>
+       <p id="text-creators"></p>
+       <button onclick="moreText()">click here to generate text on the bottom</button>
+       <script>
+        const myButton = document.getElementById('theButton');
+        
+        myButton.addEventListener('click', function(event) {
+            event.target.parentNode.removeChild(event.target);
+        });
+
+        function createText() {
+            document.getElementById("text-creators").textContent = "This text was created by a button"
+        }
+        function moreText() {
+            document.getElementById('why').textContent = "Not yet i wanna be lazy"
+        }
+       </script>
+      </div>
+    </main>
+    <footer>
+     <h1 id="why"></h1>
+    </footer>
+    </div>
+    </body>
+</html>
