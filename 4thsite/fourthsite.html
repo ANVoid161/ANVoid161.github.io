@@ -51,6 +51,17 @@
                 display: flex;
                 margin-top: 10px;
             }
+            h1 {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                margin: 0;
+            }
+            #why2 {
+                border: 4px;
+                padding: 8px;
+                margin-top: 20px;
+            }
         </style>
         <script>
         </script>
@@ -84,13 +95,15 @@
             document.getElementById("text-creators").textContent = "This text was created by a button"
         }
         function moreText() {
-            document.getElementById('why').textContent = "Not yet i wanna be lazy"
+            document.getElementById('why').textContent = "How do you want to use buttons?"
+            document.getElementById('why2').textContent = "I'll give you the code in a second"
         }
        </script>
       </div>
     </main>
     <footer>
      <h1 id="why"></h1>
+     <p id="why2"></p>
     </footer>
     </div>
     </body>
