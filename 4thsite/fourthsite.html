@@ -85,6 +85,7 @@
        <p id="text-creators"></p>
        <button onclick="moreText()">click here to generate text on the bottom</button>
        <script>
+        var text = ["This text was created by a button", "There is a planet"]
         const myButton = document.getElementById('theButton');
         
         myButton.addEventListener('click', function(event) {
@@ -92,10 +93,10 @@
         });
 
         function createText() {
-            document.getElementById("text-creators").textContent = "This text was created by a button"
+            document.getElementById("text-creators").textContent = text[0]
         }
         function moreText() {
-            document.getElementById('why2').textContent = "There is a planet"
+            document.getElementById('why2').textContent = text[1]
         }
        </script>
       </div>
