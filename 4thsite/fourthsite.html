@@ -83,21 +83,25 @@
        <h2>This is gonna be used for tweaking stuff in Java</h2>
        <button id="theButton" onclick="createText()">This button creates text</button>
        <p id="text-creators"></p>
-       <button onclick="moreText()">click here to generate text on the bottom</button>
+       <button id="toggle" onclick="moreText()">click pls</button>
        <script>
-        var text = ["This text was created by a button", "There is a planet"]
+        var text = ["This text was created by a button"]
         const myButton = document.getElementById('theButton');
-        
+        const secondButton = document.getElementById('toggle');
+
         myButton.addEventListener('click', function(event) {
             event.target.parentNode.removeChild(event.target);
-        });
-
-        function createText() {
             document.getElementById("text-creators").textContent = text[0]
-        }
-        function moreText() {
-            document.getElementById('why2').textContent = text[1]
-        }
+        });
+        secondButton.addEventListener('click', function(){
+            if (secondButton.textContent === "click pls") {
+                secondButton.textContent = "again"
+                document.getElementById('why2').textContent = "There is a planet"
+            } else {
+                secondButton.textContent = "click pls"
+                document.getElementById('why2').textContent = ""
+            }
+        })
        </script>
       </div>
     </main>
