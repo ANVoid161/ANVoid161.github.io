@@ -33,11 +33,11 @@ else if (response === "Duster") {
 }
 else if (response === "Katy Perry") {
   alert("No, I'm not listening to their music.")
-  location.href="/secondsite/secondsite.html"
+  location.href="/portfolio.html"
 }
 else if (response === ""){
   alert("At least say something...")
-  location.href="/secondsite/secondsite.html"
+  location.href="/portfolio.html"
 }
 else if (response === "I am Phoebe") {
   alert("Fine, I guess you can enter.")
@@ -54,13 +54,9 @@ else if (response === "Cookies") {
   alert("Ah, Oreo's, you may enter.")
   location.href="/thirdsite/thirdsite.html"
 }
-else if (response === "Goblet of Fire") {
-  alert("'DID YOU PUT YOUR NAME IN THE GOBLET OF FIRE?!?!' ANVoid161 said calmly")
-  location.href="/secondsite/secondsite.html"
-}
 else if (response === "Which came first? The ghost or the poltergeist?") {
   alert("A non-being can never be. Try something better.")
-  location.href="/secondsite/secondsite.html"
+  location.href="/portfolio.html"
 }
 else if (response === "Architect Celeste") {
   alert("Ah... you seek more power... I shall give you it if you give a word of importance.")
@@ -91,5 +87,5 @@ else if (response === "sfc /scannow") {
 }
 else {
   alert("Try Again.")
-  location.href="/secondsite/secondsite.html"
+  location.href="/portfolio.html"
 }
