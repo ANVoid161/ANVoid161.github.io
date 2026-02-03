@@ -265,10 +265,9 @@ snakeSquare.column = column;
 repositionSquare(snakeSquare);
 if (snake.body.length === 0) {
   snakeSquare.element.attr("id", "snake-head");
+}
   snake.body.push(snakeSquare);
   snake.tail = snakeSquare;
-}
-
 }
 
 /* 
