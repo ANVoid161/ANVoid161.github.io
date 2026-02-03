@@ -76,7 +76,7 @@ if (started) {
 }
 
 if (hasHitWall() || hasCollidedWithSnake()) {
-  endGame()
+  endGame();
 }
 
 if (hasCollidedWithApple()) {
@@ -118,21 +118,21 @@ function moveSnake() {
     stored in the Array snake.body and each part knows its current 
     column/row properties. 
   */
-for (var i = snake.body.length; i > 0; i--) {
-  var currentSnakeSquare = snake.body[i];
-  var snakeSquareInFront = snake.body[i -1];
 
-  moveBodyAToBodyB(currentSnakeSquare, snakeSquareInFront);
-
-  repositionSquare(currentSnakeSquare);
-}
 
 
 
 
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
+for (var i = snake.body.length - 1; i > 0; i--) {
+  var currentSnakeSquare = snake.body[i];
+  var snakeSquareInFront = snake.body[i - 1];
 
+  moveBodyAToBodyB(currentSnakeSquare, snakeSquareInFront);
+
+  repositionSquare(currentSnakeSquare);
+}
   /* 
     TODO 8: determine the next row and column for the snake's head
     
@@ -142,13 +142,13 @@ for (var i = snake.body.length; i > 0; i--) {
 if (snake.head.direction === "left") {
   snake.head.column--
 }
-else if (snake.head.direction === "right") {
+if (snake.head.direction === "right") {
   snake.head.column++
 }
-else if (snake.head.direction === "up") {
+if (snake.head.direction === "up") {
   snake.head.row--
 }
-else if (snake.head.direction === "down") {
+if (snake.head.direction === "down") {
   snake.head.row++
 }
 repositionSquare(snake.head);
