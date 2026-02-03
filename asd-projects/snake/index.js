@@ -95,16 +95,13 @@ function checkForNewDirection(event) {
   if (activeKey === KEY.LEFT) {
     snake.head.direction = "left";
   }
-
-  if (activeKey === KEY.RIGHT) {
+  else if (activeKey === KEY.RIGHT) {
     snake.head.direction = "right"
   }
-
-  if (activeKey === KEY.UP) {
+  else if (activeKey === KEY.UP) {
     snake.head.direction = "up"
   }
-
-  if (activeKey === KEY.DOWN) {
+  else if (activeKey === KEY.DOWN) {
     snake.head.direction = "down"
   }
   // FILL IN THE REST
@@ -121,7 +118,14 @@ function moveSnake() {
     stored in the Array snake.body and each part knows its current 
     column/row properties. 
   */
+for (var i = snake.body.length; i > 0; i--) {
+  var currentSnakeSquare = snake.body[i];
+  var snakeSquareInFront = snake.body[i -1];
 
+  moveBodyAToBodyB(currentSnakeSquare, snakeSquareInFront);
+
+  repositionSquare(currentSnakeSquare);
+}
 
 
 
@@ -135,14 +139,27 @@ function moveSnake() {
     HINT: The snake's head will need to move forward 1 square based on the value
     of snake.head.direction which may be one of "left", "right", "up", or "down"
   */
-
-
-
-
+if (snake.head.direction === "left") {
+  snake.head.column--
+}
+else if (snake.head.direction === "right") {
+  snake.head.column++
+}
+else if (snake.head.direction === "up") {
+  snake.head.row--
+}
+else if (snake.head.direction === "down") {
+  snake.head.row++
+}
+repositionSquare(snake.head);
 }
 
 // TODO 9: Create a new helper function
-
+function moveBodyAToBodyB(bodyA, bodyB) {
+bodyA.row = bodyB.row;
+bodyA.column = bodyB.column;
+bodyA.direction = bodyB.direction;
+}
 
 
 
