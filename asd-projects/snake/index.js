@@ -341,7 +341,11 @@ function getRandomAvailablePosition() {
       not occupied by a snakeSquare in the snake's body. If it is then set 
       spaceIsAvailable to false so that a new position is generated.
     */
-
+    for (i = 0; i < snake.body.length; i++) {
+      if (snake.body[i].row === randomPosition.row && snake.body[i].column === randomPosition.column) {
+        spaceIsAvailable = false
+      }
+    }
 
 
   }
