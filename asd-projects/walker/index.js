@@ -17,12 +17,23 @@ const KEY = {
   UP: 38,
   RIGHT: 39,
   DOWN: 40,
+  A: 65,
+  W: 87,
+  D: 68,
+  S: 83,
 };
 var walker = {
   x: 0,
   y: 0,
-  speedX: 1,
-  speedY: 1
+  speedX: 0,
+  speedY: 0
+}
+
+var secondWalker = {
+  x: 0,
+  y: 200,
+  speedX: 0,
+  speedY: 0
 }
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -34,7 +45,7 @@ var walker = {
   Note: You can have multiple event listeners for different types of events.
   */
   $(document).on('keydown', handleKeyDown);                          
-
+  $(document).on('keyup', handleKeyUp)
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -45,7 +56,8 @@ var walker = {
   */
   function newFrame() {
     repositionGameItem()
-    console.log(walker.x, walker.y)
+    redrawGameItem()
+    wallCollision()
   }
   
   /* 
@@ -56,17 +68,44 @@ var walker = {
   */
   function handleKeyDown(event) {
    if (event.which === KEY.LEFT) {
-     console.log('left')
+     walker.speedX = -5
    }
    if (event.which === KEY.UP) {
-    console.log('up')
+    walker.speedY = -5
    }
    if (event.which === KEY.RIGHT) {
-    console.log('right')
+    walker.speedX = 5
    }
    if (event.which === KEY.DOWN) {
-    console.log('down')
+    walker.speedY = 5
    }
+   if (event.which === KEY.A) {
+    secondWalker.speedX = -5
+   }
+   if (event.which === KEY.D) {
+    secondWalker.speedX = 5
+   }
+   if (event.which === KEY.W) {
+    secondWalker.speedY = -5
+   }
+   if (event.which === KEY.S) {
+    secondWalker.speedY = 5
+   }
+  }
+
+  function handleKeyUp(event) {
+    if (event.which === KEY.LEFT || event.which === KEY.RIGHT) {
+      walker.speedX = 0
+    }
+    if (event.which === KEY.UP || event.which === KEY.DOWN) {
+      walker.speedY = 0
+    }
+    if (event.which === KEY.A || event.which === KEY.D) {
+      secondWalker.speedX = 0
+    }
+    if (event.which === KEY.W || event.which === KEY.S) {
+      secondWalker.speedY = 0
+    }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -76,6 +115,42 @@ var walker = {
   function repositionGameItem() {
 walker.x = walker.x + walker.speedX
 walker.y = walker.y + walker.speedY
+secondWalker.x = secondWalker.x + secondWalker.speedX
+secondWalker.y = secondWalker.y + secondWalker.speedY
+  }
+
+  function redrawGameItem() {
+    $("#walker").css("left", walker.x);
+    $("#walker").css("top", walker.y);
+    $("#secondWalker").css("left", secondWalker.x);
+    $("#secondWalker").css("top", secondWalker.y);
+  }
+
+  function wallCollision() {
+    if (walker.x < 0) {
+      walker.x = $("#board").width()
+    }
+    if (walker.x > $("#board").width()){
+      walker.x = 0
+    }
+    if (walker.y < 0) {
+      walker.y = $("#board").height()
+    }
+    if (walker.y > $("#board").height()) {
+      walker.y = 0
+    }
+    if (secondWalker.x < 0) {
+      secondWalker.x = $("#board").width()
+    }
+    if (secondWalker.x > $("#board").width()){
+      secondWalker.x = 0
+    }
+    if (secondWalker.y < 0) {
+      secondWalker.y = $("#board").height()
+    }
+    if (secondWalker.y > $("#board").height()) {
+      secondWalker.y = 0
+    }
   }
   
   function endGame() {
