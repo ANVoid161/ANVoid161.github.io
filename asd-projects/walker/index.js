@@ -56,8 +56,8 @@ var secondWalker = {
   */
   function newFrame() {
     repositionGameItem()
-    redrawGameItem()
     wallCollision()
+    redrawGameItem()
   }
   
   /* 
@@ -128,28 +128,28 @@ secondWalker.y = secondWalker.y + secondWalker.speedY
 
   function wallCollision() {
     if (walker.x < 0) {
-      walker.x = $("#board").width()
-    }
-    if (walker.x > $("#board").width()){
       walker.x = 0
     }
-    if (walker.y < 0) {
-      walker.y = $("#board").height()
+    if (walker.x > $("#board").width() - 50){
+      walker.x = $("#board").width() - 50
     }
-    if (walker.y > $("#board").height()) {
+    if (walker.y < 0) {
       walker.y = 0
     }
-    if (secondWalker.x < 0) {
-      secondWalker.x = $("#board").width()
+    if (walker.y > $("#board").height() - 50) {
+      walker.y = $("#board").height() - 50
     }
-    if (secondWalker.x > $("#board").width()){
+    if (secondWalker.x < 0) {
       secondWalker.x = 0
     }
-    if (secondWalker.y < 0) {
-      secondWalker.y = $("#board").height()
+    if (secondWalker.x > $("#board").width() - 50){
+      secondWalker.x = $("#board").width() - 50
     }
-    if (secondWalker.y > $("#board").height()) {
+    if (secondWalker.y < 0) {
       secondWalker.y = 0
+    }
+    if (secondWalker.y > $("#board").height() - 50) {
+      secondWalker.y = $("#board").height() - 50
     }
   }
   
