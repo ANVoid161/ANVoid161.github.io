@@ -24,6 +24,9 @@ function applyAndRender() {
 // applyFilter(decreaseBlue)
 applyFilter(increaseGreenByBlue)  
 
+// applyFilterNoBackground(reddify)
+// applyFilterNoBackground(decreaseBlue)
+// applyFilterNoBackground(increaseGreenByBlue)
   // do not change the below line of code
   render($("#display"), image);
 }
@@ -48,7 +51,22 @@ for (let j = 0; j < image[i].length; j++) {
 }
 
 // TODO 9 Create the applyFilterNoBackground function
+function applyFilterNoBackground(filterFunction) {
+  const backgroundColor = image[0][0]
 
+  for (let row = 0; row < image.length; row++) {
+    for (let col = 0; col < image[row].length; col++) {
+      let rgbString = image[row][col]
+      let rgbNumbers = rgbStringToArray
+
+      if (rgbString !== backgroundColor) {
+        filterFunction(rgbNumbers)
+        rgbString = rgbArrayToString(rgbNumbers)
+        image[row][col] = rgbString
+      }
+    }
+  }
+}
 
 // TODO 6: Create the keepInBounds function
 function keepInBounds(boundNum) {
